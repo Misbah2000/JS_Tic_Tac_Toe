@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dangrek&family=Nunito+Sans:wght@600&family=Open+Sans:wght@400;500;600&family=Prompt:wght@300&family=Roboto&family=Rubik&family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Dangrek', cursive;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #077e6ed6;
+}
+
+.selection{
+    padding: 50px 80px;
+    border-radius: 8px;
+    background: whitesmoke;
+    text-align: center;
+    box-shadow: 6px 4px 20px rgba(0, 0, 0, .1),
+                inset 6px 4px 12px rgba(0, 0, 0, .2);
+}
+
+.selection h2{
+    color: #077e6ed6;
+    font-size: 4rem;
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+.selection p{
+    color: #032621;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-variant: small-caps;
+    margin-top: 20px;
+}
+
+.selection .players{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.selection .players .player{
+    cursor: pointer;
+    color: #075e53d6;
+    width: 5rem;
+    height: 4rem;
+    margin: 0 5px;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: 3px solid #067667d6;
+    transition: .4s;
+}
+
+.selection .players .player:hover{
+    color: whitesmoke;
+    background: #067667d6;
+}
+
+/* animation */
+
+.fadeOut{
+    animation: hide .3s linear alternate;
+}
+@keyframes hide{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.fadeIn{
+    animation: show .3s linear alternate;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.play-board{
+    display: none;
+    padding: 25px;
+    border-radius: 8px;
+    background: whitesmoke;
+    text-align: center;
+    box-shadow: 6px 4px 20px rgba(0, 0, 0, .1),
+                inset 6px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+table td{
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
+    text-align: center;
+    background: #bef2ea;
+    border: 2px solid rgb(242, 247, 249);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.reset{
+    cursor: pointer;
+    color: #075e53d6;
+    border: 3px solid #067667d6;
+    padding: 4px 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    transition: .4s;
+}
+
+.reset:hover{
+    color: whitesmoke;
+    background: #067667d6;
+}
+
+.winner{
+    display: none;
+    padding: 40px 50px;
+    border-radius: 8px;
+    background: whitesmoke;
+    text-align: center;
+    box-shadow: 6px 4px 20px rgba(0, 0, 0, .1),
+                inset 6px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.winner h3{
+    font-size: 30px;
+    font-weight: 500;
+    font-variant: small-caps;
+}
